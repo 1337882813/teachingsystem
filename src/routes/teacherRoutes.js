@@ -44,6 +44,7 @@ export default function (pool) {
                 GROUP BY C.kh,C.km, T.xm, O.sksj,O.xq` // 查询教师教的课程
                 ,[teacherId]
             )
+            
             // 验证查询结果
             if (result.rows.length > 0) {
                 res.json({ success: true, data: result.rows }) // 返回查询结果 
